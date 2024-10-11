@@ -34,6 +34,8 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt-get update
 sudo apt-get install jenkins -y
 
+#Adding jenkins to docker group
+sudo usermod -aG docker jenkins
 
 # Update and install necessary packages
 sudo apt-get update
