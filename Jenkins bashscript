@@ -6,4 +6,4 @@ if [ $(docker images -q --filter "reference=mern_app") ]; then
 else
     echo "Image not found"
 fi
-sudo docker-compose up -d --build
+docker-compose up -d --build
