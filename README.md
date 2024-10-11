@@ -42,7 +42,7 @@ Add Jenkins to the Docker group in the user data.
    ```
 
    Once the instance is up, the user data script will handle the installation of the required packages and services.
-
+   Check **EC2.tf** & **user-data.sh** files.
 ---
 
 ## Step 2: Clone the Repository
@@ -55,6 +55,7 @@ git clone https://github.com/maham0612/mern-app.git
 
 This repository will contain the necessary application files.
 
+Also check **Git Repo link** to get code link.
 ---
 
 ## Step 3: Create Docker and Docker Compose Files
@@ -66,7 +67,7 @@ Expose the application on port 5000 and MongoDB on port 27017.
 - **docker-compose.yml**: Make build of the image in docker-compose file and bind the container at 5000 port. Also attach the volume so that if the container stops the data will not be loss.
 
 Push these files to the GitHub repository to ensure that they can be accessed by Jenkins for deployment.
-
+Check **Dockerfile** & **Docker compose file**
 ---
 
 ## Step 4: Set Up Jenkins Pipeline
