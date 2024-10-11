@@ -76,13 +76,13 @@ Jenkins will automate the process of building, removing old images/containers, a
 ### Steps:
 
 1. **Access Jenkins**:  
-   Open Jenkins on your EC2 instance by navigating to `http://<EC2-IP>:8080` in your browser.
+   Open Jenkins on EC2 instance by navigating to `http://<EC2-IP>:8080` in browser.
 
 2. **Create a New Pipeline**:  
    In Jenkins, create a new pipeline job that will:
 
-   - **Clone the GitHub repository**: Fetch the latest code for your MERN app.
-   - **Remove existing Docker images and containers**: This ensures that we start with a fresh deployment. The pipeline should run commands to remove any old containers and images related to the app.
+   - **Clone the GitHub repository**: Fetch the latest code for MERN app.
+   - **Remove existing Docker images and containers**: This ensures that start with a fresh deployment. The pipeline should run commands to remove any old containers and images related to the app.
    - **Build and deploy the application**: Use Docker Compose to build the image and start the necessary services.
    
    The pipeline script can include steps like:
@@ -93,13 +93,17 @@ Jenkins will automate the process of building, removing old images/containers, a
    - Starting the containers in detached mode.
 
 3. **Add Jenkins to the Docker Group**:  
-   Ensure Jenkins can run Docker commands without needing sudo access. You can do this by adding Jenkins to the Docker group in the EC2 instance.
+   Ensure Jenkins can run Docker commands without needing sudo access. This can be done by adding Jenkins to the Docker group in the User's data when creating EC2 instance.
 
 ---
+
+Check **Jenkins**
 
 ## Step 5: Configure Nginx as a Reverse Proxy
 
 Nginx will be set up to route incoming traffic to the appropriate backend service (the Node.js app running in Docker).
+
+Check **nginx as proxy** file
 
 ### Steps:
 
